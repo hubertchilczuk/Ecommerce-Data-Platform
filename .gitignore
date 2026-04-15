@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# Data
+data/
+*.parquet
+*.csv
+!tests/**/*.csv
+
+# Spark / logs
+spark-warehouse/
+derby.log
+metastore_db/
+logs/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
+
+# OS
+.DS_Store
+Thumbs.db
