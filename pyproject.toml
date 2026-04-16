@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ecommerce-data-platform"
+version = "0.1.0"
+description = "End-to-end e-commerce data platform: generation, ingestion, Spark, orchestration."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Data Platform Team" }]
+
+[tool.setuptools.packages.find]
+include = [
+    "data_generator*",
+    "ingestion*",
+    "spark_jobs*",
+    "data_quality*",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra --strict-markers"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "N"]
+
+[tool.black]
+line-length = 100
+target-version = ["py310"]
