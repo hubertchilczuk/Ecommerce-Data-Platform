@@ -1,0 +1,24 @@
+env: prod
+
+paths:
+  raw: s3://ecommerce-data-platform-prod-lake/raw
+  bronze: s3://ecommerce-data-platform-prod-lake/bronze
+  silver: s3://ecommerce-data-platform-prod-lake/silver
+  gold: s3://ecommerce-data-platform-prod-lake/gold
+
+generator:
+  num_events: 1000000
+  num_users: 100000
+  num_products: 5000
+  seed: 7
+
+spark:
+  master: "spark://spark-master:7077"
+  shuffle_partitions: 200
+
+database:
+  host: ${DB_HOST}
+  port: 5432
+  user: ${DB_USER}
+  password: ${DB_PASSWORD}
+  name: analytics

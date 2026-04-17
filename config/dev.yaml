@@ -1,0 +1,24 @@
+env: dev
+
+paths:
+  raw: data/raw
+  bronze: data/lake/bronze
+  silver: data/lake/silver
+  gold: data/lake/gold
+
+generator:
+  num_events: 10000
+  num_users: 1000
+  num_products: 200
+  seed: 42
+
+spark:
+  master: "local[*]"
+  shuffle_partitions: 8
+
+database:
+  host: localhost
+  port: 5432
+  user: airflow
+  password: airflow
+  name: analytics
