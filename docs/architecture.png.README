@@ -1,0 +1,11 @@
+Replace this placeholder with the actual architecture diagram exported as
+`architecture.png` (e.g. from draw.io / Excalidraw / Mermaid).
+
+Suggested content:
+- Sources (generator / external APIs)
+- Ingestion (batch + optional Kafka stream)
+- Data lake (bronze / silver / gold)
+- Spark jobs between layers
+- Data quality gates
+- Airflow orchestrating the flow
+- SQL / BI consumers on top of gold
